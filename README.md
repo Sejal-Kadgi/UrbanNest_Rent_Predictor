@@ -26,7 +26,7 @@ An end-to-end MLOps project that predicts monthly house rent for Mumbai, Pune, D
 - BHK showed zero importance due to being constant in the dataset — identified via feature importance analysis
 
 ## Project Structure
-\```
+```
 ├── app.py              # Streamlit frontend
 ├── Dockerfile          # Container definition
 ├── requirements.txt    # Dependencies
@@ -34,4 +34,4 @@ An end-to-end MLOps project that predicts monthly house rent for Mumbai, Pune, D
 ├── Dataset/            # Training and test data
 ├── plots/              # Optimization comparison plots
 └── screenshots/        # Experiment tracking and deployment screenshots
-\```
+```
