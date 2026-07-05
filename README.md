@@ -3,7 +3,7 @@
 **🔗 Live Demo:** https://Sejal-Kadgi-urbannest-rent-predictor.hf.space
 
 ## Overview
-A end-to-end MLOps project that predicts monthly house rent for Mumbai, Pune, Delhi, and Hisar using a Random Forest model. Built to demonstrate the full ML development lifecycle — from data preprocessing and hyperparameter optimization to containerized deployment.
+An end-to-end MLOps project that predicts monthly house rent for Mumbai, Pune, Delhi, and Hisar using a Random Forest model. Built to demonstrate the full ML development lifecycle — from data preprocessing and hyperparameter optimization to containerized deployment.
 
 ## Tools & Technologies
 - **Modeling:** scikit-learn (RandomForestRegressor)
@@ -31,7 +31,7 @@ A end-to-end MLOps project that predicts monthly house rent for Mumbai, Pune, De
 ├── Dockerfile          # Container definition
 ├── requirements.txt    # Dependencies
 ├── train.ipynb         # Training, tuning, and evaluation notebook
-├── models/             # Saved model and encoders
+├── Dataset/            # Training and test data
 ├── plots/              # Optimization comparison plots
 └── screenshots/        # Experiment tracking and deployment screenshots
 \```
