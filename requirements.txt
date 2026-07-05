@@ -1,0 +1,11 @@
+streamlit
+scikit-learn
+pandas
+numpy
+optuna
+trackio
+scipy
+matplotlib
+joblib
+kaleido
+plotly
