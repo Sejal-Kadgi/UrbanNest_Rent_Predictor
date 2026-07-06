@@ -17,6 +17,11 @@ def load_artifacts():
 
 model, label_encoders, feature_cols = load_artifacts()
 
+# Build city → locations mapping from training data
+import pandas as pd
+train_raw = pd.read_csv("Dataset/train.csv")
+city_to_locations = train_raw.groupby("city")["location"].apply(list).to_dict()
+
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(page_title="UrbanNest Rent Predictor", page_icon="🏠", layout="centered")
 st.title("🏠 UrbanNest Analytics — Rent Predictor")
@@ -29,7 +34,8 @@ col1, col2 = st.columns(2)
 
 with col1:
     city          = st.selectbox("City",              options=list(label_encoders['city'].classes_))
-    location      = st.selectbox("Location",          options=list(label_encoders['location'].classes_))
+    available_locations = sorted(set(city_to_locations.get(city, list(label_encoders['location'].classes_))))
+    location = st.selectbox("Location", options=available_locations)
 
 with col2:
     status        = st.selectbox("Furnishing Status", options=list(label_encoders['Status'].classes_))
